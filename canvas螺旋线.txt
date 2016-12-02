@@ -1,0 +1,12 @@
+var r = 1;
+var draw = window.setInterval(function(){
+	drawLine(ct,r=r+1/r);
+},1);
+function drawLine(ct,r){
+	ct.beginPath();
+	ct.arc(500,300,r,r,r+1);
+	ct.stroke();
+	if(r>200){
+		clearInterval(draw);
+	}
+}
